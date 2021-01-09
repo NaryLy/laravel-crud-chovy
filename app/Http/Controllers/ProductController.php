@@ -48,7 +48,7 @@ class ProductController extends Controller
         $pro_arr = $request->toArray();
         $pro_arr['img_url'] = $img_name;
         Product::create($pro_arr);
-        dd($request->all());
+        ($request->all());
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
 
 
